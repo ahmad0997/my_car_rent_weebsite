@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="stylesheet" href="style.css">
+
+   
+    
+   
+    <title>Cars</title>
+    <dev class="navpar">
+      <nav>
+          <a href="home.html">Home</a>
+          <a href="about us.html" >About Us</a>
+          <a href="cars.html" >Cars</a>
+          
+      </nav>
+     </dev>
+
+  </head>
+  <body>
+    
+  
+    <section>
+      
+      <div class="main">
+        <br>
+        <div class="title" >chose your car frome here</div>
+        <table class="center" >
+          <thead>
+            <tr>
+              <th>Car type </th>
+              <th>Production Date </th>
+              <th>Rent type </th>
+              <th>Rent Value<span class="wthTx">[With Taxes] </span>
+              </th>
+              <th>Car Image </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Hyundai Kona</td>
+              <td>2017 </td>
+              <td>daily </td>
+              <td> 200000 ل.س</td>
+              <td> <a onclick="show_pop()">
+                <img src="imgs/cona.jpg" class="img" ></a></td>
+            </tr>
+            <tr>
+              <td>Hyundai azera </td>
+              <td>1986 </td>
+              <td>daily</td>
+              <td>250000 ل.س </td>
+              <td>
+                <a onclick="show_pop()">
+                  <img src="imgs/azera.jpg" class="img" />
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td> Hyundai Creta</td>
+              <td>2005 </td>
+              <td>daily </td>
+              <td>300000 ل.س </td>
+              <td>
+                <a onclick="show_pop()">
+                  <img src="imgs/kreta.jpg" class="img">
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Hyundai elantra </td>
+              <td>1990 </td>
+              <td>monthly</td>
+              <td>700000 ل.س</td>
+              <td> <a onclick="show_pop()">
+                  <img src="imgs/alintra.jpg" class="img">
+                </a> </td>
+            </tr>
+            <tr>
+              <td>Audi A1 </td>
+              <td>2010 </td>
+              <td>daily</td>
+              <td>270000 ل.س </td>
+              <td> <a onclick="show_pop()">
+                  <img src="imgs/audi A1.jpg" class="img">
+                </a> </td>
+            </tr>
+            <tr>
+              <td>Audi A3 </td>
+              <td>1996</td>
+              <td>monthly</td>
+              <td>600000 ل.س</td>
+              <td> <a onclick="show_pop()">
+                  <img src="imgs/audi A3.jpg" class="img">
+                </a> </td>
+            </tr>
+            <tr>
+              <td>BMW X5 </td>
+              <td>1999 </td>
+              <td>monthly</td>
+              <td>1000000 ل.س </td>
+              <td> <a onclick="show_pop()">
+                  <img src="imgs/bmw x5.jpg" class="img">
+                </a> </td>
+            </tr>
+            <tr>
+              <td>BMW 330i </td>
+              <td>1975 </td>
+              <td>monthly</td>
+              <td>750000 ل.س</td>
+              <td> <a onclick="show_pop()">
+                  <img src="imgs/bmw 330i.jpg" class="img">
+                </a> </td>
+            </tr>
+            <tr>
+              <td>BMW 550i </td>
+              <td>1981 </td>
+              <td>monthly </td>
+              <td>900000 ل.س</td>
+              <td> <a onclick="show_pop()">
+                  <img src="imgs/bmw 550i.jpg" class="img">
+                </a> </td>
+            </tr>
+            <tr>
+              <td>toyota tundra </td>
+              <td>2023 </td>
+              <td>daily </td>
+              <td>1500000 ل.س </td>
+              <td> <a onclick="show_pop()"> <img src="imgs/toyota tundra.jpg" class="img"></a> </td>
+            </tr>
+          </tbody>
+        </table>
+      
+        
+     
+    </section>
+   
+   
+    
+
+    <section class="pop" >
+      <div class="open" id="openid">
+        <div class="pop_content" id="pop" >
+          <img  class="popimg" src="imgs/alintra.jpg" alt="">
+          <table class="pop_table" >
+            <thead>
+              <th>dayly rent</th>
+              <th>rent type</th>
+              <th>rebuld taxes</th>
+              <th>finesh valu</th>
+            </thead>
+            <tr>
+              <td>200000</td>
+              <td>dalyly</td>
+              <td>600</td>
+              <td>200800</td>
+            </tr>
+           
+          </table>
+          <br>
+          <div class="buttons">
+
+            <button class="btn " onclick="hide_pop(),hide_form()" >close</button>
+            <button class="btn " onclick="run_form()" >contenu</button>
+          </div>
+          
+        </div>
+      </div>
+      
+    </section>
+    <section class="form" >
+      <div class="open_form" >
+    <div class="content_form" id="form">
+      <p>pleas inter your information</p>
+      <form class="f">
+        <label for="full_name">الاسم الكامل:</label>
+        <input type="text" placeholder="inter your name"  id="full_name" name="full_name" pattern="[ء-ي0-9\s]+" required>
+        <br><br>
+        <label for="national_id">الرقم الوطني:</label>
+        <input type="text" placeholder="inter your national number" id="national_id" name="national_id" pattern="[0-9]{11}" required>
+        <br><br>
+        <label for="birth_date">تاريخ الولادة:</label>
+        <input type="date" id="birth_date" name="birth_date" pattern="(0[1-9]|[12][0-9]|3[01])-(0[1-9]|1[0-2])-\d{4}" required>
+        <br><br>
+        <label for="mobile_number">رقم الموبايل:</label>
+        <input type="tel" placeholder="inter your mobil number" id="mobile_number" name="mobile_number" pattern="(09)(3|4|5|6|9)\d{7}" required>
+        <br><br>
+        <label for="mobile_operator">شركة الاتصال:</label>
+        <select id="mobile_operator" name="mobile_operator">
+         <option value="syriatel">سيريتل</option>
+         <option value="MTN">ام تي ان</option>
+        </select>
+        <br><br>
+        <label for="email">البريد الإلكتروني:</label>
+        <input type="email" placeholder="inter your email" id="email" name="email" required>
+        <br><br>
+         <div id="capcode" class="preview"></div>
+        
+        <input type="submit" value="إرسال"  >
+       </form>
+      <button onclick="hide_form()" >hide</button>
+      </div>
+    </div>
+     </div>
+  </section>
+  <script src="myFunction.js"></script>
+  </body>
+</html>
